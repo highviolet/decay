@@ -56,6 +56,14 @@ def main():
         )
     normalize = st.checkbox("Normalize weights", value=True)
 
+    # Calculate the time to reach a certain amount of informations
+    a = st.slider(
+        "Amount of information", min_value=0.0, max_value=0.995, value=0.8, step=0.05
+    )
+    st.write(
+        f"Time to {a:.1%} of info: {math.log(1 - a) / math.log(decay_A):.1f} days for A, {math.log(1 - a) / math.log(decay_B):.1f} days for B"
+    )
+
     data = {
         "A": get_weights(int(DAYS_IN_YEAR * n_months_A / 12), decay_A, normalize),
         "B": get_weights(int(DAYS_IN_YEAR * n_months_B / 12), decay_B, normalize),
