@@ -28,14 +28,32 @@ def main():
     col1, col2 = st.columns(2)
     with col1:
         n_months_A = st.slider(
-            "Number of months A", min_value=1, max_value=36, value=18, step=1
+            "Number of months A",
+            min_value=1,
+            max_value=36,
+            value=18,
+            step=1,
         )
-        decay_A = st.slider("Decay factor A", min_value=0.0, max_value=1.0, value=0.94)
+        decay_A = st.slider(
+            "Decay factor A",
+            min_value=0.0,
+            max_value=1.0,
+            value=0.94,
+        )
     with col2:
         n_months_B = st.slider(
-            "Number of months B", min_value=1, max_value=36, value=3, step=1
+            "Number of months B",
+            min_value=1,
+            max_value=36,
+            value=18,
+            step=1,
         )
-        decay_B = st.slider("Decay factor B", min_value=0.0, max_value=1.0, value=0.97)
+        decay_B = st.slider(
+            "Decay factor B",
+            min_value=0.0,
+            max_value=1.0,
+            value=0.97,
+        )
     normalize = st.checkbox("Normalize weights", value=True)
 
     data = {
