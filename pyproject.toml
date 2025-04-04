@@ -1,0 +1,10 @@
+[project]
+name = "decay"
+version = "0.1.0"
+description = "Simple app showing how decay factors affect time series weighting."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["streamlit>=1.44.1"]
+
+[dependency-groups]
+dev = ["ruff>=0.11.3", "watchdog>=6.0.0"]
