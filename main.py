@@ -80,7 +80,6 @@ def main():
         days_per_month = int(DAYS_IN_YEAR / 12)
         n_months = n_months_A if series_name == "A" else n_months_B
         monthly_indices = [days_per_month * i - 1 for i in range(1, n_months + 1)]
-        print(monthly_indices)
         cumulative_weights = (
             df[series_name].cumsum().iloc[monthly_indices].reset_index(drop=True)
         )
